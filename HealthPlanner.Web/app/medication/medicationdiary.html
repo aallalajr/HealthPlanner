@@ -1,0 +1,23 @@
+﻿<section class="mainbar" data-ng-controller="medicationdiary as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"
+                         subtitle="{{vm.medications.length}}"></div>
+                    <div class="widget-content recipe">
+                        <div class="padd" data-ng-repeat="m in vm.medications">
+                            <div class="recipe-details">
+                                <h6>{{m.name}}</h6>
+                                Rank: <small>{{m.rank}}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

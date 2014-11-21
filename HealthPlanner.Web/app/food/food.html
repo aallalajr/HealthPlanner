@@ -1,0 +1,30 @@
+﻿<section class="mainbar" data-ng-controller="food as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"
+                         subtitle="{{vm.food.length}}"></div>
+                    <div class="widget-content recipe">
+                        <div class="padd" data-ng-repeat="f in vm.food">
+                            <div class="recipe-details">
+                                <h6>{{f.name}}</h6>
+                                Rating: <small>{{f.rating}}</small>
+                                Calories: <small>{{f.calories}}</small>
+                                Carbs: <small>{{f.carbs}}</small>
+                                Fat: <small>{{f.fat}}</small>
+                                Protein: <small>{{f.protein}}</small>
+                                Sodium: <small>{{f.sodium}}</small>
+                                Sugar: <small>{{f.sugar}}</small>
+                                TransFat: <small>{{f.transFat}}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

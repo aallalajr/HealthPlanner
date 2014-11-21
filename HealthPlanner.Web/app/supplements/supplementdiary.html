@@ -1,0 +1,28 @@
+﻿<section class="mainbar" data-ng-controller="supplementdiary as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"
+                         subtitle="{{vm.supplements.length}}"></div>
+                    <div class="widget-content recipe">
+                        <div class="padd" data-ng-repeat="s in vm.supplements">
+                            <div class="recipe">
+                                <img data-ng-src="{{s.supplement.imageSource}}"
+                                     class="img-polaroid recipe-pic" />
+                            </div>
+                            <div class="recipe-details">
+                                <h6>{{s.name}}</h6>
+                                <small>{{s.servings}}</small>: servings
+                                Rank: <small>{{s.rank}}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,40 @@
+﻿<section class="mainbar" data-ng-controller="recipe as vm">
+    <section class="matter">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="widget wgreen">
+                    <div data-cc-widget-header title="{{vm.getTitle()}}"></div>
+                    <div class="widget-content user">
+                        <form class="form-horizontal" role="form" name="recipeForm">
+                            <div>
+                                <div data-ng-repeat="r in vm.recipe">
+                                    <label>Name:</label>
+                                    <input id="inputName" placeholder="Name" data-ng-model="r.name"/>
+                                    <label>Number of Servings:</label>
+                                    <input id="inputServings" placeholder="Servings" data-ng-model="r.servings"/>
+                                </div>
+                            </div>                            
+                            <div data-cc-widget-header title="Ingredients {{vm.ingredients.length}}"></div>
+                            <div class="widget-content recipe">
+                                <div data-ng-repeat="i in vm.ingredients">
+                                    <div class="recipe">
+                                    </div>
+                                    <div class="recipe-details">
+                                        <h6>{{i.name}} {{i.calories}} {{i.carbs}} {{i.fat}} {{i.protein}} {{i.sodium}} {{i.sugar}} {{i.transFat}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button ng-click="addIngredient">+</button>
+                            </div>
+                            <button ng-click="saveData()">Save</button>
+                        </form>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
